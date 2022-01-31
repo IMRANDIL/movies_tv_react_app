@@ -18,7 +18,7 @@ function CustomPagination({ setPage, numOfPages = 10 }) {
     }
     return <div className='pagination'>
 
-        <Pagination count={numOfPages} onChange={(e) => handlePageChange(e.target.textContent)} color='primary' />
+        <Pagination count={numOfPages} onChange={(e) => handlePageChange(e.target.textContent)} color='primary' hideNextButton hidePrevButton />
 
 
     </div>;
