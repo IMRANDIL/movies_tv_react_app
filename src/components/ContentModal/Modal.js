@@ -43,12 +43,22 @@ export default function ContentModal({ children, media_type, id }) {
     React.useEffect(() => {
         fetchVideo();
         fetchData()
+        // eslint-disable-next-line
     }, [])
 
 
     return (
-        <div>
-            <Button onClick={handleOpen} className='media'>{children}</Button>
+        <>
+            <div className='media'
+
+                style={{ cursor: "pointer" }}
+                color="inherit"
+                onClick={handleOpen}
+
+            >
+                {children}
+            </div>
+
             <Modal
                 aria-labelledby="transition-modal-title"
                 aria-describedby="transition-modal-description"
@@ -66,7 +76,7 @@ export default function ContentModal({ children, media_type, id }) {
                 }}
             >
                 <Fade in={open}>
-                    {content && (<Box sx={style}>
+                    {content && (<Box sx={style} >
                         <div className='ContentModal'>
                             <img className='contentModal_portrait' alt={content.name || content.title} src={content.poster_path ? `${img_500}/${content.poster_path}` : unavailable} />
                             <img className='contentModal_landscape' alt={content.name || content.title} src={content.backdrop_path ? `${img_500}/${content.backdrop_path}` : unavailableLandscape} />
@@ -99,9 +109,11 @@ export default function ContentModal({ children, media_type, id }) {
                                 </Button>
                             </div>
                         </div>
+
                     </Box>)}
                 </Fade>
             </Modal>
-        </div>
+
+        </>
     );
 }
