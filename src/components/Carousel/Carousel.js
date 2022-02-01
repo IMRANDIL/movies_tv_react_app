@@ -16,7 +16,9 @@ const Carousel = ({ media_type, id }) => {
         <div className="carouselItem">
             <img
                 src={c.profile_path ? `${img_300}/${c.profile_path}` : noPicture}
-                alt={c?.name}
+
+                alt={c.name}
+
                 onDragStart={handleDragStart}
                 className="carouselItem__img"
             />
