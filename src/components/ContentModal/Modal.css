@@ -30,6 +30,10 @@
   display: none;
 }
 
+.ContentModal .MuiButtonBase-root{
+  color: white !important;
+}
+
 .contentModal_about {
   padding: 10px;
   width: 95%;
@@ -43,7 +47,7 @@
 
 .contentModal_title {
   height: 12%;
-  font-size: 5vw;
+  font-size: 4vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,7 +55,7 @@
 
 .contentModal_description {
   display: flex;
-  height: 40%;
+  height: 50%;
   overflow-y: scroll;
   padding: 15px;
   border-radius: 20px;
@@ -83,7 +87,7 @@
     height: 100%;
   }
   .contentModal_title {
-    font-size: 3.5vw;
+    font-size: 2.5vw;
   }
   .contentModal_description {
     font-size: 22px;
