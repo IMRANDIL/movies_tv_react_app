@@ -7,7 +7,8 @@ import Button from '@mui/material/Button';
 import axios from 'axios';
 import { img_500, unavailable, unavailableLandscape } from '../../config/config';
 import YouTubeIcon from '@material-ui/icons/YouTube';
-import './Modal.css'
+import './Modal.css';
+import Carousel from '../Carousel/Carousel';
 
 const style = {
 
@@ -94,7 +95,7 @@ export default function ContentModal({ children, media_type, id }) {
                                     {content.overview}
                                 </span>
                                 <div>
-
+                                    <Carousel media_type={media_type} id={id} />
                                 </div>
                                 <Button
                                     variant='contained'
