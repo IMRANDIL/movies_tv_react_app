@@ -22,7 +22,7 @@ function Seaarch() {
 
 
         setContent(data.results);
-        setNumOfPages(data.total_pages)
+        setNumOfPages(500)
     }
 
 
